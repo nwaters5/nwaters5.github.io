@@ -8,11 +8,10 @@
 from browser import document, alert
 
 # bind event 'click' on button to function echo
+def hello(ev):
+    alert("Hello !")
 
-def echo(ev):
-    alert(document["zone"].value)
-
-document["mybutton"].bind("click", echo)
+document["button0"].bind("click", hello)
 </script>
 <input id="zone">
 <button id="mybutton">click !</button>
