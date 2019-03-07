@@ -1,5 +1,5 @@
 <html>
-  <head><title>why hello there</title>
+  <head><title>why, hello there</title>
   <script src="brython.js">
   </head>
   <body onload="brython()">
@@ -7,11 +7,11 @@
     <script type="text/python">
 from browser import document, alert
 
-# bind event 'click' on button to function echo
+
 def hello(ev):
     alert("Hello !")
 
-document["button0"].bind("click", hello)
+document["mybutton"].bind("click", hello)
 </script>
 <input id="zone">
 <button id="mybutton">click !</button>
