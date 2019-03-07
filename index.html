@@ -1,6 +1,19 @@
 <html>
   <head><title>why hello there</title></head>
-  <body>
+  <body onload="brython()">
+
+    <script type="text/python">
+from browser import document, alert
+
+# bind event 'click' on button to function echo
+
+def echo(ev):
+    alert(document["zone"].value)
+
+document["mybutton"].bind("click", echo)
+</script>
+<input id="zone">
+<button id="mybutton">click !</button>
     <h1>my name's nick</h1>
     <p>here is a cat</p>
     <img alt="Cat" src="Cat03.png" width="700" height="700"/>
