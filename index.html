@@ -1,6 +1,6 @@
 <html>
-  <head><title>why, hello there</title>
-  <script src="brython.js">
+  <head><title>why hello there</title>
+  <script src="brython.js"></script>
   </head>
   <body onload="brython()">
 
@@ -8,10 +8,10 @@
 from browser import document, alert
 
 
-def hello(ev):
-    alert("Hello !")
+def echo(ev):
+    alert(document["zone"].value)
 
-document["mybutton"].bind("click", hello)
+document["mybutton"].bind("click", echo)
 </script>
 <input id="zone">
 <button id="mybutton">click !</button>
